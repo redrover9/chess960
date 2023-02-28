@@ -10,9 +10,10 @@
 //have coords
 //light and dark squares
 
-//define piece unicode - long, but having hex addition would be less readable
+//define piece unicode
 //could also write unicode directly and not declare variables - also a readability issue
 //light and dark square bishops distinguished for later validation
+//same for rooks
 
 var whitePawn = "\u2659";
 var blackPawn = "\u265F";
@@ -63,6 +64,7 @@ function shuffle(array) {
 function assignWhiteLocations(){
     //each non-pawn piece - bishops should likely have square colour specified - rooks will not have greater/lesser file specified
     const whitePieces = [whiteQueen, whiteKnightOne, whiteKnightTwo];
+    //ensure there is a light and dark bishop
     const evenNumbers = [2, 4, 6, 8];
     const oddNumbers = [1, 3, 5, 7];
     shuffle(evenNumbers);
@@ -70,10 +72,12 @@ function assignWhiteLocations(){
     const whitePieceLocations = new Map();
     whitePieceLocations.set(evenNumbers[0], whiteLightBishop);
     whitePieceLocations.set(oddNumbers[0], whiteDarkBishop);
+    //take these numbers out to remove dupes
     evenNumbers.shift();
     oddNumbers.shift();
     const fileNumbers = evenNumbers.concat(oddNumbers);
     fileNumbers.sort(function(a, b){return a - b});
+    //ensure king between rooks
     const largestNumbers = fileNumbers.slice(2, fileNumbers.length - 1);
     var largeRookFile = fileNumbers.indexOf(largestNumbers[Math.floor(Math.random()*largestNumbers.length)]);
     const middleNumbers = fileNumbers.slice(1, largeRookFile);
