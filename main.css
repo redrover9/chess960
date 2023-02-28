@@ -30,7 +30,9 @@ h1 {
     justify-content: left;
     align-items: left; 
     inline-size: 20em;
-    display: inline-block}
+    display: inline-block;
+    padding-right: 10em;
+}
 
 .button {
     display: inline-block;
@@ -69,6 +71,7 @@ h1 {
     justify-content: center;
     align-items: center;
     text-align:center;
+    padding-right: 35em;
 }
 .lightSquare {
     background: #d6c9e5;
