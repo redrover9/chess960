@@ -32,3 +32,37 @@ h1 {
 .darkSquare {
     background: #acacac;
 }
+table {
+    border-collapse: collapse;
+    display: block;
+    table-layout: fixed;
+    width: 64vmin;
+    height: 64vmin;
+  }
+  
+td, th {
+    border: 1px solid #000000;
+    overflow: hidden;
+    text-align: center;
+    width: 8vmin;
+    height: 8vmin;
+    font-size: 4vmin;
+  }
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lightSquare {
+    background: #ebebeb;
+}
+
+.darkSquare {
+    background: #acacac;
+}
