@@ -19,9 +19,6 @@ td, th {
     color: #412C5B;
   }
 
-button {
-    display: flex;
-}
 
 h1 {
     display: flex;
@@ -29,10 +26,49 @@ h1 {
     align-items: center;
     color: #412C5B;
 }
+.text {
+    justify-content: left;
+    align-items: left; 
+    inline-size: 20em;
+    display: inline-block}
+
+.button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #352349;
+    background-color: #dacee7;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    font-family: 'Playfair Display', sans-serif;
+  
+}
+.button:hover {
+    background-color: #dad3e2;
+}
+.button:active {
+    background-color: #dad3e2;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }  
+
+.centerButton {
+    top: 5em;
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+}
+
 .board {
-    display: flex;
+    display: inline-block;
     justify-content: center;
     align-items: center;
+    text-align:center;
 }
 .lightSquare {
     background: #d6c9e5;
@@ -40,4 +76,17 @@ h1 {
 
 .darkSquare {
     background: #a489c6;
+}
+
+.parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttonParent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
 }
