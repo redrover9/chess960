@@ -1,3 +1,7 @@
+html {
+    background-color: #e6deef;
+    font-family: 'Playfair Display', serif;
+}
 table {
     border-collapse: collapse;
     display: block;
@@ -12,12 +16,18 @@ td, th {
     width: 8vmin;
     height: 8vmin;
     font-size: 4vmin;
+    color: #412C5B;
   }
+
+button {
+    display: flex;
+}
 
 h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #412C5B;
 }
 .board {
     display: flex;
@@ -25,9 +35,9 @@ h1 {
     align-items: center;
 }
 .lightSquare {
-    background: #9272BB;
+    background: #d6c9e5;
 }
 
 .darkSquare {
-    background: #7851a9;
+    background: #a489c6;
 }
